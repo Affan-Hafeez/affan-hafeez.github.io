@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Garage Master Showroom</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Link your car data sheet -->
     <script src="cars.js"></script>
 </head>
 <body class="era-1960s">
@@ -36,36 +35,45 @@
 
     <!-- ARCADE SHOWROOM SCREEN -->
     <main class="showroom">
+        <!-- Left Column: Media & Blog Review -->
         <section class="car-display">
             <h1 id="car-title">SELECT VEHICLE</h1>
             <div class="turntable">
                 <img id="car-image" src="mustang.jpg" alt="Showroom Grid">
             </div>
+            <div class="blog-review-box">
+                <p id="car-description">Please choose an era, country, and car manufacturer from the top navigation dashboard matrix to begin loading the profile data.</p>
+            </div>
         </section>
 
+        <!-- Right Column: Performance Meters & Specs -->
         <section class="car-stats">
             <h2>VEHICLE PERFORMANCE DATA</h2>
             <div class="stat-group">
                 <label>TOP SPEED</label>
-                <div class="bar-container"><div id="stat-speed" class="stat-bar" style="width: 0%;"></div></div>
+                <div class="bar-container"><div id="stat-speed" class="stat-bar"></div></div>
             </div>
             <div class="stat-group">
                 <label>ACCELERATION</label>
-                <div class="bar-container"><div id="stat-accel" class="stat-bar" style="width: 0%;"></div></div>
+                <div class="bar-container"><div id="stat-accel" class="stat-bar"></div></div>
             </div>
             <div class="stat-group">
                 <label>HANDLING</label>
-                <div class="bar-container"><div id="stat-handling" class="stat-bar" style="width: 0%;"></div></div>
+                <div class="bar-container"><div id="stat-handling" class="stat-bar"></div></div>
             </div>
-            <div class="blog-review-box">
-                <p id="car-description">Please choose an era, country, and car manufacturer from the top navigation dashboard matrix to begin loading the profile data.</p>
+
+            <!-- MECHANICAL ENGINE SPECIFICATIONS -->
+            <div class="specs-panel">
+                <h3>MECHANICAL PROFILE</h3>
+                <div class="spec-line"><span class="spec-label">ENGINE:</span> <span id="spec-engine">--</span></div>
+                <div class="spec-line"><span class="spec-label">POWER:</span> <span id="spec-power">--</span></div>
+                <div class="spec-line"><span class="spec-label">DRIVETRAIN:</span> <span id="spec-layout">--</span></div>
             </div>
         </section>
     </main>
 
     <!-- CORE INTERACTIVE ENGINE SCRIPT -->
     <script>
-        // 1. Load Eras when page starts up
         window.onload = function() {
             const eraSelect = document.getElementById("era-dropdown");
             eraSelect.innerHTML = '<option value="">-- Select Era --</option>';
@@ -74,7 +82,6 @@
             });
         };
 
-        // 2. When Era changes, fill Country dropdown
         function updateCountries() {
             const era = document.getElementById("era-dropdown").value;
             const countrySelect = document.getElementById("country-dropdown");
@@ -84,8 +91,6 @@
             brandSelect.innerHTML = '<option value="">-- Choose Brand --</option>';
             
             if (!era) return;
-
-            // Shift visual theme immediately to match the era clicked
             document.body.className = "era-" + era;
 
             Object.keys(carDatabase[era]).forEach(country => {
@@ -93,7 +98,6 @@
             });
         }
 
-        // 3. When Country changes, fill the Manufacturer dropdown
         function updateBrands() {
             const era = document.getElementById("era-dropdown").value;
             const country = document.getElementById("country-dropdown").value;
@@ -107,22 +111,25 @@
             });
         }
 
-        // 4. When Brand changes, render the chosen vehicle's imagery & statistics
         function loadSelectedCar() {
             const era = document.getElementById("era-dropdown").value;
             const country = document.getElementById("country-dropdown").value;
             const brand = document.getElementById("brand-dropdown").value;
 
             if (!era || !country || !brand) return;
-
             const car = carDatabase[era][country][brand];
 
-            // Render text updates and dynamic graphics
+            // Text and asset data loading
             document.getElementById('car-title').innerText = car.name;
             document.getElementById('car-image').src = car.image;
             document.getElementById('car-description').innerText = car.desc;
             
-            // Animate performance matrix meters
+            // Specifications text loading
+            document.getElementById('spec-engine').innerText = car.engine;
+            document.getElementById('spec-power').innerText = car.power;
+            document.getElementById('spec-layout').innerText = car.drivetrain;
+            
+            // Performance meter animations
             document.getElementById('stat-speed').style.width = car.speed;
             document.getElementById('stat-accel').style.width = car.accel;
             document.getElementById('stat-handling').style.width = car.handling;
