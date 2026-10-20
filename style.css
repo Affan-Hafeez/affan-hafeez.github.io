@@ -25,43 +25,86 @@ body {
 select { padding: 10px; background: #111; color: #fff; border: 1px solid #444; border-radius: 4px; font-weight: bold; cursor: pointer; }
 
 /* LAYOUT CONTAINER MATRIX */
-.showroom { display: flex; gap: 50px; background: rgba(0,0,0,0.55); padding: 35px; border-radius: 12px; max-width: 950px; width: 100%; justify-content: space-between; box-sizing: border-box; }
+.showroom { display: flex; gap: 50px; background: rgba(0,0,0,0.65); padding: 35px; border-radius: 12px; max-width: 950px; width: 100%; justify-content: space-between; box-sizing: border-box; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
 .car-display { flex: 1.2; text-align: center; display: flex; flex-direction: column; gap: 20px; }
-.turntable img { max-width: 100%; height: auto; border-radius: 8px; border: 2px solid rgba(255,255,255,0.2); }
+.car-display h1 { margin: 0; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; }
 
-.blog-review-box { background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; text-align: left; }
+/* 🌟 UPDATED: TURNTABLE PHOTO BOX WITH CUSTOM BORDER OUTLINES */
+.turntable {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 5px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,0,0,0.5));
+    transition: all 0.5s ease;
+}
+.turntable img { 
+    display: block;
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 6px; 
+    transition: all 0.5s ease;
+}
+
+.blog-review-box { background: rgba(0, 0, 0, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; text-align: left; }
 #car-description { font-size: 14px; line-height: 1.6; margin: 0; }
 
 /* PERFORMANCE METER DATA SLIDERS */
 .car-stats { flex: 0.8; display: flex; flex-direction: column; }
-.car-stats h2 { font-size: 18px; margin-top: 0; border-bottom: 2px solid dotted; padding-bottom: 10px; }
+.car-stats h2 { font-size: 16px; margin-top: 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; letter-spacing: 1px; }
 .stat-group { margin-bottom: 18px; }
 .stat-group label { display: block; font-size: 11px; margin-bottom: 6px; font-weight: bold; letter-spacing: 1px; }
-.bar-container { background: #1a1a1a; width: 100%; height: 20px; border-radius: 4px; overflow: hidden; padding: 2px; box-sizing: border-box; border: 1px solid #333; }
+.bar-container { background: #111; width: 100%; height: 20px; border-radius: 4px; overflow: hidden; padding: 2px; box-sizing: border-box; border: 1px solid #222; }
 .stat-bar { height: 100%; border-radius: 2px; width: 0%; transition: width 0.7s cubic-bezier(0.1, 1, 0.1, 1); }
 
 /* MECHANICAL SPEC PANEL STYLING */
-.specs-panel { margin-top: 25px; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px; border-radius: 6px; }
-.specs-panel h3 { margin-top: 0; font-size: 13px; letter-spacing: 1px; border-bottom: 1px dashed rgba(255,255,255,0.2); padding-bottom: 5px; }
+.specs-panel { margin-top: 25px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.08); padding: 15px; border-radius: 6px; }
+.specs-panel h3 { margin-top: 0; font-size: 12px; letter-spacing: 1px; border-bottom: 1px dashed rgba(255,255,255,0.2); padding-bottom: 5px; color: #888; }
 .spec-line { font-size: 13px; margin-bottom: 6px; display: flex; justify-content: space-between; }
-.spec-label { font-weight: bold; color: #888; }
+.spec-label { font-weight: bold; color: #666; }
 
-/* CHRONOLOGICAL VISUAL SKIN LAYERS */
-body.era-1950s { background-color: #1a2a3a; color: #e0f2f1; }
+/* ==========================================================================
+   CHRONOLOGICAL VISUAL SKIN LAYERS (BACKGROUND LOOKS & BORDER ADJUSTMENTS)
+   ========================================================================== */
+
+/* 1950s Theme */
+body.era-1950s { background-color: #1e2d2f; background-image: radial-gradient(circle, #2a3d40 10%, #1e2d2f 90%); color: #e0f2f1; }
+body.era-1950s .turntable { border: 2px solid #80cbc4; box-shadow: 0 0 15px rgba(128,203,196,0.3); }
 body.era-1950s .stat-bar { background: #008080; }
-body.era-1960s { background-color: #2b1d12; color: #f4eae1; }
-body.era-1960s .stat-bar { background: #b22222; }
-body.era-1970s { background-color: #3a2212; color: #ffe0b2; }
+
+/* 1960s Classic Vintage Muscle Theme */
+body.era-1960s { background-color: #261c14; background-image: linear-gradient(#261c14, #1a120c); color: #f4eae1; }
+body.era-1960s .turntable { border: 3px double #dfb76c; } /* Classic double-line chrome styling frame */
+body.era-1960s .stat-bar { background: #b22222; box-shadow: inset 0 0 5px rgba(0,0,0,0.5); }
+
+/* 1970s Theme */
+body.era-1970s { background-color: #331e11; color: #ffe0b2; }
+body.era-1970s .turntable { border: 2px solid #d35400; }
 body.era-1970s .stat-bar { background: #d35400; }
-body.era-1980s { background-color: #0d0221; color: #00ffcc; }
-body.era-1980s .stat-bar { background: linear-gradient(90deg, #ff007f, #00ffcc); }
-body.era-1990s { background-color: #1c1e22; color: #fffb00; }
+
+/* 1980s Neon Synthwave Laser Arcade Theme */
+body.era-1980s { background-color: #080114; background-image: linear-gradient(rgba(255, 0, 127, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 204, 0.05) 1px, transparent 1px); background-size: 20px 20px; color: #00ffcc; }
+body.era-1980s .turntable { border: 2px solid #ff007f; box-shadow: 0 0 20px #ff007f, inset 0 0 10px #ff007f; } /* Neon glowing pink border */
+body.era-1980s .stat-bar { background: linear-gradient(90deg, #ff007f, #00ffcc); box-shadow: 0 0 8px #00ffcc; }
+
+/* 1990s Gritty Rally Championship Theme */
+body.era-1990s { background-color: #17181c; background-image: radial-gradient(#2c2e35 15%, transparent 16%); background-size: 8px 8px; color: #fffb00; }
 body.era-1990s h1, body.era-1990s h2 { font-family: 'Impact', sans-serif; font-style: italic; }
+body.era-1990s .turntable { border: 3px solid #fffb00; transform: rotate(-0.5deg); } /* Gritty offset warning-tape border style */
 body.era-1990s .stat-bar { background: #00ff66; }
-body.era-2000s { background-color: #050b14; color: #00a2ff; }
-body.era-2000s .stat-bar { background: linear-gradient(90deg, #0055ff, #00d4ff); }
-body.era-2010s { background-color: #141414; color: #ffffff; }
+
+/* 2000s Underground Street Racing Theme */
+body.era-2000s { background-color: #03070d; background-image: linear-gradient(45deg, #02050a 25%, transparent 25%), linear-gradient(-45deg, #02050a 25%, transparent 25%); background-size: 30px 30px; color: #00a2ff; }
+body.era-2000s .turntable { border: 2px solid #00a2ff; box-shadow: 0 0 25px rgba(0,162,255,0.6); } /* Nitro underglow image frame effect */
+body.era-2000s .stat-bar { background: linear-gradient(90deg, #0055ff, #00d4ff); box-shadow: 0 0 10px #00d4ff; }
+
+/* 2010s Theme */
+body.era-2010s { background-color: #121212; color: #ffffff; }
+body.era-2010s .turntable { border: 1px solid #444; }
 body.era-2010s .stat-bar { background: #e60000; }
-body.era-2020s { background-color: #080808; color: #ffffff; }
-body.era-2020s h1, body.era-2020s h2 { text-shadow: 0 0 15px #fff; }
-body.era-2020s .stat-bar { background: #ffffff; box-shadow: 0 0 10px #ffffff; }
+
+/* 2020s Cyber Hypercar Theme */
+body.era-2020s { background-color: #030303; color: #ffffff; }
+body.era-2020s h1, body.era-2020s h2 { text-shadow: 0 0 15px #fff; font-family: monospace; }
+body.era-2020s .turntable { border: 1px solid #ffffff; box-shadow: 0 0 30px rgba(255,255,255,0.15); } /* Minimal ultra-white glow outline */
+body.era-2020s .stat-bar { background: #ffffff; box-shadow: 0 0 15px #ffffff; }
