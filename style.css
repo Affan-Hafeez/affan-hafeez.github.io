@@ -1,0 +1,39 @@
+/* BASE CORE STYLING */
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.6s ease, color 0.6s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.era-selector { display: flex; gap: 20px; margin-bottom: 40px; }
+button { padding: 12px 24px; font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.3s; }
+.showroom { display: flex; gap: 60px; background: rgba(0,0,0,0.4); padding: 30px; border-radius: 12px; max-width: 900px; width: 100%; justify-content: space-between; }
+.car-display { flex: 1; text-align: center; }
+.turntable img { max-width: 100%; height: auto; border-radius: 8px; border: 2px solid rgba(255,255,255,0.2); }
+.car-stats { width: 300px; display: flex; flex-direction: column; justify-content: center; }
+.stat-group { margin-bottom: 20px; }
+.stat-group label { display: block; font-size: 12px; margin-bottom: 5px; font-weight: bold; letter-spacing: 1px; }
+.bar-container { background: #222; width: 100%; height: 24px; border-radius: 4px; overflow: hidden; padding: 2px; box-sizing: border-box;}
+.stat-bar { height: 100%; border-radius: 2px; transition: width 0.6s cubic-bezier(0.1, 1, 0.1, 1); }
+
+/* 1960s CLASSIC VINTAGE TIMELINE */
+body.era-1960s { background-color: #2b1d12; color: #f4eae1; }
+body.era-1960s h1, body.era-1960s h2 { font-family: 'Georgia', serif; color: #dfb76c; }
+body.era-1960s button { background: #dfb76c; color: #2b1d12; border: 2px solid #fff; border-radius: 0px; font-family: 'Georgia', serif; }
+body.era-1960s .stat-bar { background: #b22222; box-shadow: inset 0 0 5px #000; }
+
+/* 1990s GRITTY RALLY CHAMPIONSHIP TIMELINE */
+body.era-1990s { background-color: #1a1c1e; color: #fffb00; }
+body.era-1990s h1, body.era-1990s h2 { font-family: 'Impact', sans-serif; font-style: italic; letter-spacing: 2px; }
+body.era-1990s button { background: #333; color: #fffb00; border: 3px double #fffb00; transform: skewX(-12deg); font-family: 'Impact', sans-serif; }
+body.era-1990s .stat-bar { background: #00ff66; }
+
+/* 2000s UNDERGROUND STREET RACING TIMELINE */
+body.era-2000s { background-color: #080f14; color: #00a2ff; }
+body.era-2000s h1, body.era-2000s h2 { font-family: 'Arial Black', sans-serif; text-shadow: 0 0 10px #00a2ff; }
+body.era-2000s button { background: #00a2ff; color: #000; border: none; border-radius: 20px; font-family: sans-serif; box-shadow: 0 0 15px #00a2ff; }
+body.era-2000s .stat-bar { background: linear-gradient(90deg, #0055ff, #00d4ff); box-shadow: 0 0 10px #00d4ff; }
