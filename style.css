@@ -9,6 +9,29 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+/* ADDED THE DOT HERE SO YOUR BLOG BOX WORKS PERFECTLY */
+.blog-review-box {
+    margin-top: 25px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#car-description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+/* Era Specific Text Adjustments */
+body.era-1960s #car-description { font-family: 'Georgia', serif; }
+body.era-1990s #car-description { font-family: 'Courier New', monospace; color: #fff; }
+body.era-2000s #car-description { font-family: sans-serif; color: #e0e0e0; }
+
 .era-selector { display: flex; gap: 20px; margin-bottom: 40px; }
 button { padding: 12px 24px; font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.3s; }
 .showroom { display: flex; gap: 60px; background: rgba(0,0,0,0.4); padding: 30px; border-radius: 12px; max-width: 900px; width: 100%; justify-content: space-between; }
