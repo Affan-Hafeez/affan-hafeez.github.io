@@ -9,10 +9,10 @@
 <body class="era-1960s"> <!-- Default starting era -->
 
     <!-- GARAGE MENU CARDS -->
-    <nav class="era-selector">
-        <button class="btn-60s" onclick="changeEra('1960s', '1969 FORD MUSTANG BOSS 429', 'mustang.jpg', '90%', '45%', '30%')">1960s CLASSIC</button>
-        <button class="btn-90s" onclick="changeEra('1990s', 'NISSAN SKYLINE GT-R (R32)', 'skyline.jpg', '78%', '85%', '72%')">1990s RALLY</button>
-        <button class="btn-2000s" onclick="changeEra('2000s', 'MITSUBISHI LANCER EVO VII', 'lancer.jpg', '82%', '95%', '88%')">2000s STREET</button>
+   <nav class="era-selector">
+        <button class="btn-60s" onclick="changeEra('1960s', '1969 FORD MUSTANG BOSS 429', 'mustang.jpg', '90%', '45%', '30%', 'The ultimate muscle car of the late 1960s. Featuring a massive race-ready V8 engine, this legendary machine represents the raw mechanical power of the classic American garage era.')">1960s CLASSIC</button>
+        <button class="btn-90s" onclick="changeEra('1990s', 'NISSAN SKYLINE GT-R (R32)', 'skyline.jpg', '78%', '85%', '72%', 'The crown jewel of 90s Japanese tech. Dubbed Godzilla, its advanced all-wheel-drive system and twin-turbo engine dominated racetrack championships and birthed modern tuning culture.')">1990s RALLY</button>
+        <button class="btn-2000s" onclick="changeEra('2000s', 'MITSUBISHI LANCER EVO VII', 'lancer.jpg', '82%', '95%', '88%', 'Straight out of the underground street racing circuits of the early 2000s. Known for lightning-fast turbo response, neon underglow compatibility, and incredible drift handling.')">2000s STREET</button>
     </nav>
     <!-- ARCADE SHOWROOM SCREEN -->
     <main class="showroom">
@@ -39,17 +39,22 @@
                 <label>HANDLING</label>
                 <div class="bar-container"><div id="stat-handling" class="stat-bar" style="width: 30%;"></div></div>
             </div>
+             <div class="blog-review-box">
+        <p id="car-description">The ultimate muscle car of the late 1960s. Featuring a massive race-ready V8 engine and aggressive fastback styling, this legendary machine represents the raw mechanical power of the classic American garage era.</p>
+    </div>
         </section>
     </main>
 
     <!-- INTERACTIVE CODE CONTROL -->
-    <script>
-        function changeEra(eraName, carTitle, imgUrl, speed, accel, handling) {
+     <script>
+        function changeEra(eraName, carTitle, imgUrl, speed, accel, handling, descriptionText) {
             // Update the layout visual theme
             document.body.className = "era-" + eraName;
             // Update the display text and asset sources
             document.getElementById('car-title').innerText = carTitle;
             document.getElementById('car-image').src = imgUrl;
+            // Update the blog review text
+            document.getElementById('car-description').innerText = descriptionText;
             // Transition the gaming system statistic meters
             document.getElementById('stat-speed').style.width = speed;
             document.getElementById('stat-accel').style.width = accel;
