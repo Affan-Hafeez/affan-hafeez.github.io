@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Garage Master Showroom</title>
     <link rel="stylesheet" href="style.css">
-    <script src="cars.js"></script>
+    <!-- Link your three modular data sheets -->
+    <script src="cars_early.js"></script>
+    <script src="cars_middle.js"></script>
+    <script src="cars_modern.js"></script>
 </head>
 <body class="era-1960s">
 
@@ -72,8 +75,15 @@
         </section>
     </main>
 
-    <!-- CORE INTERACTIVE ENGINE SCRIPT -->
+    <!-- MASTER ASSEMBLY SCRIPT -->
     <script>
+        // Combine our three separate database blocks into one master matrix array
+        const carDatabase = {
+            ...carDatabaseEarly,
+            ...carDatabaseMiddle,
+            ...carDatabaseModern
+        };
+
         window.onload = function() {
             const eraSelect = document.getElementById("era-dropdown");
             eraSelect.innerHTML = '<option value="">-- Select Era --</option>';
@@ -119,17 +129,17 @@
             if (!era || !country || !brand) return;
             const car = carDatabase[era][country][brand];
 
-            // Text and asset data loading
+            // Render details text
             document.getElementById('car-title').innerText = car.name;
             document.getElementById('car-image').src = car.image;
             document.getElementById('car-description').innerText = car.desc;
             
-            // Specifications text loading
+            // Render specifications panel
             document.getElementById('spec-engine').innerText = car.engine;
             document.getElementById('spec-power').innerText = car.power;
             document.getElementById('spec-layout').innerText = car.drivetrain;
             
-            // Performance meter animations
+            // Trigger performance stat bars
             document.getElementById('stat-speed').style.width = car.speed;
             document.getElementById('stat-accel').style.width = car.accel;
             document.getElementById('stat-handling').style.width = car.handling;
