@@ -145,11 +145,131 @@ const carDatabase = {
                 "engine": "1.8L Turbocharged 4-Cylinder", "power": "197 HP", "drivetrain": "Mid-Engine (4WD)",
                 "desc": "A legendary mid-engined rally special built to dominate Group B dirt tracks. Features massive flared arches and explosive acceleration spikes."
             },
-            "Renault": {
+              "Renault": {
                 "name": "1980 RENAULT 5 TURBO 1", "image": "mustang.jpg",
                 "speed": "75%", "accel": "88%", "handling": "85%",
                 "engine": "1.4L Turbocharged Inline-4", "power": "158 HP", "drivetrain": "MR Layout (RWD)",
                 "desc": "Renault took a standard city car, ripped out the rear seats, and shoved a punchy turbo engine right behind the driver for extreme rally performance."
+            }
+        }
+    }, // Cleanly closes the 1980s node block and opens up the next sequence
+    "1990s": {
+        "Japan": {
+            "Nissan": {
+                              "name": "1994 NISSAN SKYLINE GT-R (R32)", "image": "skyline.jpg",
+                "speed": "82%", "accel": "88%", "handling": "85%",
+                "engine": "2.6L RB26DETT Twin-Turbo I6", "power": "276 HP", "drivetrain": "ATTESA E-TS (AWD)",
+                "desc": "Nicknamed 'Godzilla' by racing journals after shattering global touring championships. The definitive flagship matrix icon for Japanese high-tech tuning."
+            },
+            "Honda": {
+                "name": "1992 HONDA NSX TYPE R", "image": "skyline.jpg",
+                "speed": "84%", "accel": "80%", "handling": "94%",
+                "engine": "3.0L VTEC Naturally-Aspirated V6", "power": "276 HP", "drivetrain": "MR Layout (RWD)",
+                "desc": "A lightweight, raw track machine tuned with feedback from racing driver Ayrton Senna. It proved Japanese engineering could beat Ferrari reliability."
+            }
+        },
+        "UK": {
+            "McLaren": {
+                "name": "1992 MCLAREN F1 ROAD CAR", "image": "skyline.jpg",
+                "speed": "98%", "accel": "94%", "handling": "92%",
+                "engine": "6.1L BMW Custom V12", "power": "618 HP", "drivetrain": "Central Seat (RWD)",
+                "desc": "Featuring a gold-lined engine bay and a unique central driver seating layout, this legendary car held the title of the absolute fastest naturally-aspirated production car."
+            },
+            "Lotus": {
+                "name": "1996 LOTUS ELISE SERIES 1", "image": "skyline.jpg",
+                "speed": "68%", "accel": "75%", "handling": "95%",
+                "engine": "1.8L Rover K-Series I4", "power": "118 HP", "drivetrain": "MR Layout (RWD)",
+                "desc": "Built with an extruded aluminum chassis, it prioritized ultra-low curb weight to deliver go-kart handling and unparalleled cornering precision."
+            }
+        },
+        "France": {
+            "Venturi": {
+                "name": "1995 VENTURI ATLANTIQUE 300", "image": "skyline.jpg",
+                "speed": "86%", "accel": "82%", "handling": "80%",
+                "engine": "3.0L Twin-Turbo V6", "power": "281 HP", "drivetrain": "MR Layout (RWD)",
+                "desc": "A beautiful boutique French supercar crafted to take on Porsche. Its sleek fiberglass lines and mid-engine twin-turbo balance made it incredibly nimble."
+            }
+        }
+    },
+    "2000s": {
+        "Japan": {
+            "Mitsubishi": {
+                "name": "2001 MITSUBISHI LANCER EVO VII", "image": "lancer.jpg",
+                "speed": "80%", "accel": "86%", "handling": "92%",
+                "engine": "2.0L 4G63T Turbocharged I4", "power": "280 HP", "drivetrain": "Active Center Diff (AWD)",
+                "desc": "Straight from rally motorsport heritage into early-2000s underground street racing circuits. Celebrated for high tuning limits and extreme cornering speeds."
+            },
+            "Lexus": {
+                "name": "2009 LEXUS LFA SUPERCAR", "image": "lancer.jpg",
+                "speed": "92%", "accel": "88%", "handling": "92%",
+                "engine": "4.8L V10 Engine", "power": "552 HP", "drivetrain": "FR Layout (RWD)",
+                "desc": "A carbon-fiber structural masterpiece famous for having the absolute fastest-revving Formula 1-style engine note in automotive history."
+            }
+        },
+        "France": {
+            "Renault": {
+                "name": "2001 RENAULT CLIO V6 RS", "image": "lancer.jpg",
+                "speed": "82%", "accel": "84%", "handling": "80%",
+                "engine": "3.0L naturally-aspirated V6", "power": "227 HP", "drivetrain": "MR Layout (RWD)",
+                "desc": "A wide-body insanity masterpiece developed with racing engineering. It placed a heavy naturally aspirated V6 into a tiny rear-wheel drive hatchback chassis."
+            }
+        },
+        "Italy": {
+            "Pagani": {
+                "name": "2002 PAGANI ZONDA C12-S", "image": "lancer.jpg",
+                "speed": "96%", "accel": "92%", "handling": "90%",
+                "engine": "7.3L Mercedes-AMG V12", "power": "547 HP", "drivetrain": "MR Layout (RWD)",
+                "desc": "An art-on-wheels rolling masterpiece that combined specialized Italian carbon-fiber composite materials with screaming, raw German V12 power."
+            }
+        }
+    },
+    "2010s": {
+        "France": {
+            "Bugatti": {
+                "name": "2016 BUGATTI CHIRON HYPERCAR", "image": "lancer.jpg",
+                "speed": "100%", "accel": "98%", "handling": "85%",
+                "engine": "8.0L Quad-Turbo W16", "power": "1479 HP", "drivetrain": "Permanent Haldex (AWD)",
+                "desc": "A heavy luxury cruise liner designed to crush speed records. A quad-turbocharged layout delivering unmatched straight-line dominance."
+            },
+            "Alpine": {
+                "name": "2017 ALPINE A110 R", "image": "lancer.jpg",
+                "speed": "80%", "accel": "85%", "handling": "94%",
+                "engine": "1.8L Turbocharged I4", "power": "296 HP", "drivetrain": "MR Layout (RWD)",
+                "desc": "A track-focused evolution of the revived French icon. Utilizes matte carbon fiber panels to keep weight down for razor-sharp handling response."
+            }
+        },
+        "South Korea": {
+            "Hyundai": {
+                "name": "2018 HYUNDAI i30 N PERFORMANCE", "image": "lancer.jpg",
+                "speed": "70%", "accel": "72%", "handling": "80%",
+                "engine": "2.0L Turbocharged I4", "power": "271 HP", "drivetrain": "Front-Wheel Drive (FWD)",
+                "desc": "The definitive launchpad for South Korea's high-performance 'N' division. Tuned heavily at the Nurburgring to battle performance track hatchbacks."
+            }
+        },
+        "Germany": {
+            "Mercedes-AMG": {
+                "name": "2015 MERCEDES-AMG GT S", "image": "lancer.jpg",
+                "speed": "90%", "accel": "88%", "handling": "86%",
+                "engine": "4.0L Twin-Turbo V8", "power": "503 HP", "drivetrain": "Front Mid-Engine (RWD)",
+                "desc": "A menacing front-mid-engine grand tourer armed with a hot-inside-V twin-turbo setup, built directly out of Affalterbach to fight the 911."
+            }
+        }
+    },
+    "2020s": {
+        "Croatia": {
+            "Rimac": {
+                "name": "2026 RIMAC NEVERA R EV", "image": "lancer.jpg",
+                "speed": "100%", "accel": "100%", "handling": "96%",
+                "engine": "Quad Electric Motors", "power": "2107 HP", "drivetrain": "Torque Vectoring (AWD)",
+                "desc": "The peak of modern electric hypercar tech. Unleashing an insane horsepower output, this machine shatters production vehicle launch records."
+            }
+        },
+        "Italy": {
+            "Maserati": {
+                "name": "2022 MASERATI MC20 SUPERCAR", "image": "lancer.jpg",
+                "speed": "94%", "accel": "92%", "handling": "90%",
+                "engine": "3.0L Twin-Turbo V6 Nettuno", "power": "621 HP", "drivetrain": "MR Layout (RWD)",
+                "desc": "Maserati's return to the mid-engine supercar arena. Powered by an F1-derived pre-chamber combustion engine nested in an ultra-rigid carbon monocoque."
             }
         }
     }
