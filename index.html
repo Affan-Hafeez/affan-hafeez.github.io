@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Garage Showroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="era-1960s"> <!-- Default starting era -->
+
+    <!-- GARAGE MENU CARDS -->
+    <nav class="era-selector">
+        <button class="btn-60s" onclick="changeEra('1960s', '1969 FORD MUSTANG BOSS 429', 'https://giphy.com', '90%', '45%', '30%')">1960s CLASSIC</button>
+        <button class="btn-90s" onclick="changeEra('1990s', 'NISSAN SKYLINE GT-R (R32)', 'https://giphy.com', '78%', '85%', '72%')">1990s RALLY</button>
+        <button class="btn-2000s" onclick="changeEra('2000s', 'MITSUBISHI LANCER EVO VII', 'https://giphy.com', '82%', '95%', '88%')">2000s STREET</button>
+    </nav>
+
+    <!-- ARCADE SHOWROOM SCREEN -->
+    <main class="showroom">
+        <!-- Showcase Container -->
+        <section class="car-display">
+            <h1 id="car-title">1969 FORD MUSTANG BOSS 429</h1>
+            <div class="turntable">
+                <!-- Temporary placeholder loop of a spinning vehicle grid -->
+                <img id="car-image" src="https://giphy.com" alt="Showroom Grid">
+            </div>
+        </section>
+
+        <!-- Video Game Statistics -->
+        <section class="car-stats">
+            <h2>VEHICLE PERFORMANCE DATA</h2>
+            <div class="stat-group">
+                <label>TOP SPEED</label>
+                <div class="bar-container"><div id="stat-speed" class="stat-bar" style="width: 90%;"></div></div>
+            </div>
+            <div class="stat-group">
+                <label>ACCELERATION</label>
+                <div class="bar-container"><div id="stat-accel" class="stat-bar" style="width: 45%;"></div></div>
+            </div>
+            <div class="stat-group">
+                <label>HANDLING</label>
+                <div class="bar-container"><div id="stat-handling" class="stat-bar" style="width: 30%;"></div></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- INTERACTIVE CODE CONTROL -->
+    <script>
+        function changeEra(eraName, carTitle, imgUrl, speed, accel, handling) {
+            // Update the layout visual theme
+            document.body.className = "era-" + eraName;
+            // Update the display text and asset sources
+            document.getElementById('car-title').innerText = carTitle;
+            document.getElementById('car-image').src = imgUrl;
+            // Transition the gaming system statistic meters
+            document.getElementById('stat-speed').style.width = speed;
+            document.getElementById('stat-accel').style.width = accel;
+            document.getElementById('stat-handling').style.width = handling;
+        }
+    </script>
+</body>
+</html>
