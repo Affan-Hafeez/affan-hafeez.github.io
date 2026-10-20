@@ -3,62 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Garage Showroom</title>
+    <title>Retro Garage Master Showroom</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Link your car data sheet -->
+    <script src="cars.js"></script>
 </head>
-<body class="era-1960s"> <!-- Default starting era -->
+<body class="era-1960s">
 
-    <!-- GARAGE MENU CARDS -->
-   <nav class="era-selector">
-        <button class="btn-60s" onclick="changeEra('1960s', '1969 FORD MUSTANG BOSS 429', 'mustang.jpg', '90%', '45%', '30%', 'The ultimate muscle car of the late 1960s. Featuring a massive race-ready V8 engine, this legendary machine represents the raw mechanical power of the classic American garage era.')">1960s CLASSIC</button>
-        <button class="btn-90s" onclick="changeEra('1990s', 'NISSAN SKYLINE GT-R (R32)', 'skyline.jpg', '78%', '85%', '72%', 'The crown jewel of 90s Japanese tech. Dubbed Godzilla, its advanced all-wheel-drive system and twin-turbo engine dominated racetrack championships and birthed modern tuning culture.')">1990s RALLY</button>
-        <button class="btn-2000s" onclick="changeEra('2000s', 'MITSUBISHI LANCER EVO VII', 'lancer.jpg', '82%', '95%', '88%', 'Straight out of the underground street racing circuits of the early 2000s. Known for lightning-fast turbo response, neon underglow compatibility, and incredible drift handling.')">2000s STREET</button>
-    </nav>
+    <!-- MASTER DROPDOWN GAME MENU SYSTEM -->
+    <header class="game-dashboard">
+        <div class="menu-select-group">
+            <label>SELECT ERA</label>
+            <select id="era-dropdown" onchange="updateCountries()">
+                <!-- Populated via JavaScript -->
+            </select>
+        </div>
+
+        <div class="menu-select-group">
+            <label>ORIGIN COUNTRY</label>
+            <select id="country-dropdown" onchange="updateBrands()">
+                <option value="">-- Choose Country --</option>
+            </select>
+        </div>
+
+        <div class="menu-select-group">
+            <label>MANUFACTURER</label>
+            <select id="brand-dropdown" onchange="loadSelectedCar()">
+                <option value="">-- Choose Brand --</option>
+            </select>
+        </div>
+    </header>
+
     <!-- ARCADE SHOWROOM SCREEN -->
     <main class="showroom">
-        <!-- Showcase Container -->
         <section class="car-display">
-            <h1 id="car-title">1969 FORD MUSTANG BOSS 429</h1>
+            <h1 id="car-title">SELECT VEHICLE</h1>
             <div class="turntable">
                 <img id="car-image" src="mustang.jpg" alt="Showroom Grid">
             </div>
         </section>
 
-        <!-- Video Game Statistics -->
         <section class="car-stats">
             <h2>VEHICLE PERFORMANCE DATA</h2>
             <div class="stat-group">
                 <label>TOP SPEED</label>
-                <div class="bar-container"><div id="stat-speed" class="stat-bar" style="width: 90%;"></div></div>
+                <div class="bar-container"><div id="stat-speed" class="stat-bar" style="width: 0%;"></div></div>
             </div>
             <div class="stat-group">
                 <label>ACCELERATION</label>
-                <div class="bar-container"><div id="stat-accel" class="stat-bar" style="width: 45%;"></div></div>
+                <div class="bar-container"><div id="stat-accel" class="stat-bar" style="width: 0%;"></div></div>
             </div>
             <div class="stat-group">
                 <label>HANDLING</label>
-                <div class="bar-container"><div id="stat-handling" class="stat-bar" style="width: 30%;"></div></div>
+                <div class="bar-container"><div id="stat-handling" class="stat-bar" style="width: 0%;"></div></div>
             </div>
-             <div class="blog-review-box">
-        <p id="car-description">The ultimate muscle car of the late 1960s. Featuring a massive race-ready V8 engine and aggressive fastback styling, this legendary machine represents the raw mechanical power of the classic American garage era.</p>
-    </div>
+            <div class="blog-review-box">
+                <p id="car-description">Please choose an era, country, and car manufacturer from the top navigation dashboard matrix to begin loading the profile data.</p>
+            </div>
         </section>
     </main>
 
-    <!-- INTERACTIVE CODE CONTROL -->
-     <script>
-        function changeEra(eraName, carTitle, imgUrl, speed, accel, handling, descriptionText) {
-            // Update the layout visual theme
-            document.body.className = "era-" + eraName;
-            // Update the display text and asset sources
-            document.getElementById('car-title').innerText = carTitle;
-            document.getElementById('car-image').src = imgUrl;
-            // Update the blog review text
-            document.getElementById('car-description').innerText = descriptionText;
-            // Transition the gaming system statistic meters
-            document.getElementById('stat-speed').style.width = speed;
-            document.getElementById('stat-accel').style.width = accel;
-            document.getElementById('stat-handling').style.width = handling;
+    <!-- CORE INTERACTIVE ENGINE SCRIPT -->
+    <script>
+        // 1. Load Eras when page starts up
+        window.onload = function() {
+            const eraSelect = document.getElementById("era-dropdown");
+            eraSelect.innerHTML = '<option value="">-- Select Era --</option>';
+            Object.keys(carDatabase).forEach(era => {
+                eraSelect.innerHTML += `<option value="${era}">${era}</option>`;
+            });
+        };
+
+        // 2. When Era changes, fill Country dropdown
+        function updateCountries() {
+            const era = document.getElementById("era-dropdown").value;
+            const countrySelect = document.getElementById("country-dropdown");
+            const brandSelect = document.getElementById("brand-dropdown");
+            
+            countrySelect.innerHTML = '<option value="">-- Choose Country --</option>';
+            brandSelect.innerHTML = '<option value="">-- Choose Brand --</option>';
+            
+            if (!era) return;
+
+            // Shift visual theme immediately to match the era clicked
+            document.body.className = "era-" + era;
+
+            Object.keys(carDatabase[era]).forEach(country => {
+                countrySelect.innerHTML += `<option value="${country}">${country}</option>`;
+            });
+        }
+
+        // 3. When Country changes, fill the Manufacturer dropdown
+        function updateBrands() {
+            const era = document.getElementById("era-dropdown").value;
+            const country = document.getElementById("country-dropdown").value;
+            const brandSelect = document.getElementById("brand-dropdown");
+            
+            brandSelect.innerHTML = '<option value="">-- Choose Brand --</option>';
+            if (!era || !country) return;
+
+            Object.keys(carDatabase[era][country]).forEach(brand => {
+                brandSelect.innerHTML += `<option value="${brand}">${brand}</option>`;
+            });
+        }
+
+        // 4. When Brand changes, render the chosen vehicle's imagery & statistics
+        function loadSelectedCar() {
+            const era = document.getElementById("era-dropdown").value;
+            const country = document.getElementById("country-dropdown").value;
+            const brand = document.getElementById("brand-dropdown").value;
+
+            if (!era || !country || !brand) return;
+
+            const car = carDatabase[era][country][brand];
+
+            // Render text updates and dynamic graphics
+            document.getElementById('car-title').innerText = car.name;
+            document.getElementById('car-image').src = car.image;
+            document.getElementById('car-description').innerText = car.desc;
+            
+            // Animate performance matrix meters
+            document.getElementById('stat-speed').style.width = car.speed;
+            document.getElementById('stat-accel').style.width = car.accel;
+            document.getElementById('stat-handling').style.width = car.handling;
         }
     </script>
 </body>
