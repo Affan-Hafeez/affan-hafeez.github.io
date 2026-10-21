@@ -10,7 +10,8 @@ const carDatabaseModern = {
         },
         "Japan": {
             "Nissan": {
-                "name": "1994 NISSAN SKYLINE GT-R (R32)", "image": "1994 Nissan Skyline GT-R (R32).jpeg",
+                "name": "1994 NISSAN SKYLINE GT-R (R32)", 
+                "image": "1994 Nissan Skyline GT-R (R32).jpeg",
                 "speed": "82%", "accel": "88%", "handling": "85%",
                 "engine": "2.6L RB26DETT Twin-Turbo I6", "power": "276 HP", "drivetrain": "ATTESA E-TS (AWD)",
                 "desc": "Nicknamed 'Godzilla' after shattering global touring championships. The definitive flagship icon for JDM tuning culture."
@@ -22,7 +23,8 @@ const carDatabaseModern = {
                 "desc": "A lightweight, raw track machine tuned with feedback from racing driver Ayrton Senna. It proved Japanese engineering could beat Ferrari reliability."
             },
             "Mazda": {
-                "name": "1992 MAZDA RX-7 (FD3S)", "image": "1992 Mazda RX-7 (FD3S).jpeg",
+                "name": "1992 MAZDA RX-7 (FD3S)", 
+                "image": "1992 Mazda RX-7 (FD3S).jpeg",
                 "speed": "85%", "accel": "82%", "handling": "95%",
                 "engine": "1.3L 13B-REW Sequential Turbo Rotary", "power": "255 HP", "drivetrain": "FR Layout (RWD)",
                 "desc": "A timeless masterpiece of organic styling and handling. The sequential twin-turbo rotary engine screamed up to a blistering redline."
