@@ -77,6 +77,7 @@
 
     <!-- MASTER HUB ASSEMBLY SCRIPT -->
     <script>
+        // Combine our three separate database blocks into one master array matrix
         const carDatabase = {
             ...carDatabaseEarly,
             ...carDatabaseMiddle,
@@ -128,14 +129,17 @@
             if (!era || !country || !brand) return;
             const car = carDatabase[era][country][brand];
 
+            // Render details text
             document.getElementById('car-title').innerText = car.name;
             document.getElementById('car-image').src = car.image;
             document.getElementById('car-description').innerText = car.desc;
             
+            // Render specifications panel
             document.getElementById('spec-engine').innerText = car.engine;
             document.getElementById('spec-power').innerText = car.power;
             document.getElementById('spec-layout').innerText = car.drivetrain;
             
+            // Trigger performance stat bars
             document.getElementById('stat-speed').style.width = car.speed;
             document.getElementById('stat-accel').style.width = car.accel;
             document.getElementById('stat-handling').style.width = car.handling;
