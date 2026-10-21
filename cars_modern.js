@@ -151,3 +151,9 @@ const carDatabaseModern = {
                 "name": "2025 KOENIGSEGG JESKO ABSOLUT", "image": "2025 Koenigsegg Jesko Absolut.jpeg",
                 "speed": "100%", "accel": "96%", "handling": "94%",
                 "engine": "5.0L Twin-Turbo V8 (E85)", "power": "1600 HP", "drivetrain": "9-Speed Light Speed (RWD)",
+                "desc": "Engineered with absolute extreme aerodynamics to shatter the 300+ mph barrier. The absolute pinnacle of combustion engine hypercar top-speed metrics."
+            }
+        }
+    }
+};
+
