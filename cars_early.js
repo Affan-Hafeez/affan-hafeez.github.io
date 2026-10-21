@@ -54,7 +54,7 @@ const carDatabaseEarly = {
                 "desc": "Built specifically to end Ferrari's dominance at endurance tracks. This purpose-built mid-engine machine swept Le Mans in historic fashion."
             },
             "Shelby": {
-                "name": "1965 SHELBY COBRA 427 S/C", "image": "1965 Shelby Cobra 427 S/C.jpeg",
+                "name": "1965 SHELBY COBRA 427 S/C", "image": "1965 Shelby Cobra 427.jpeg",
                 "speed": "85%", "accel": "90%", "handling": "60%",
                 "engine": "7.0L Ford FE 427 V8", "power": "425 HP", "drivetrain": "FR Layout (RWD)",
                 "desc": "An absolute lightweight speed machine combining a British roadster body with a massive American V8. Raw, loud, and completely unassisted."
