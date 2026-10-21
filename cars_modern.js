@@ -10,8 +10,7 @@ const carDatabaseModern = {
         },
         "Japan": {
             "Nissan": {
-                "name": "1994 NISSAN SKYLINE GT-R (R32)", 
-                "image": "1994 Nissan Skyline GT-R (R32).jpeg",
+                "name": "1994 NISSAN SKYLINE GT-R (R32)", "image": "1994 Nissan Skyline GT-R (R32).jpeg",
                 "speed": "82%", "accel": "88%", "handling": "85%",
                 "engine": "2.6L RB26DETT Twin-Turbo I6", "power": "276 HP", "drivetrain": "ATTESA E-TS (AWD)",
                 "desc": "Nicknamed 'Godzilla' after shattering global touring championships. The definitive flagship icon for JDM tuning culture."
@@ -23,8 +22,7 @@ const carDatabaseModern = {
                 "desc": "A lightweight, raw track machine tuned with feedback from racing driver Ayrton Senna. It proved Japanese engineering could beat Ferrari reliability."
             },
             "Mazda": {
-                "name": "1992 MAZDA RX-7 (FD3S)", 
-                "image": "1992 Mazda RX-7 (FD3S).jpeg",
+                "name": "1992 MAZDA RX-7 (FD3S)", "image": "1992 Mazda RX-7 (FD3S).jpeg",
                 "speed": "85%", "accel": "82%", "handling": "95%",
                 "engine": "1.3L 13B-REW Sequential Turbo Rotary", "power": "255 HP", "drivetrain": "FR Layout (RWD)",
                 "desc": "A timeless masterpiece of organic styling and handling. The sequential twin-turbo rotary engine screamed up to a blistering redline."
@@ -38,7 +36,7 @@ const carDatabaseModern = {
         },
         "UK": {
             "McLaren": {
-                "name": "1992 MCLAREN F1 ROAD CAR", "image": "1992 McLaren F1 Road Car.jpeg",
+                "name": "1992 MCLAREN F1 ROAD CAR", "image": "1992 McLaren F1.jpeg",
                 "speed": "98%", "accel": "94%", "handling": "92%",
                 "engine": "6.1L BMW Custom V12", "power": "618 HP", "drivetrain": "Central Seat (RWD)",
                 "desc": "Featuring a gold-lined engine bay and a unique central driver seating layout, this legendary car held the title of the absolute fastest naturally-aspirated production car."
@@ -68,7 +66,7 @@ const carDatabaseModern = {
                 "desc": "Straight from rally motorsport heritage into early-2000s underground street racing circuits. Celebrated for high tuning limits and extreme cornering speeds."
             },
             "Lexus": {
-                "name": "2009 LEXUS LFA SUPERCAR", "image": "2009 Lexus LFA Supercar.jpeg",
+                "name": "2009 LEXUS LFA SUPERCAR", "image": "2009 Lexus LFA.jpeg",
                 "speed": "92%", "accel": "88%", "handling": "92%",
                 "engine": "4.8L V10 Engine", "power": "552 HP", "drivetrain": "FR Layout (RWD)",
                 "desc": "A carbon-fiber structural masterpiece famous for having the absolute fastest-revving Formula 1-style engine note in automotive history."
@@ -94,7 +92,7 @@ const carDatabaseModern = {
     "2010s": {
         "France": {
             "Bugatti": {
-                "name": "2016 BUGATTI CHIRON HYPERCAR", "image": "2016 Bugatti Chiron Hypercar.jpeg",
+                "name": "2016 BUGATTI CHIRON HYPERCAR", "image": "2016 Bugatti Chiron.jpeg",
                 "speed": "100%", "accel": "98%", "handling": "85%",
                 "engine": "8.0L Quad-Turbo W16", "power": "1479 HP", "drivetrain": "Permanent Haldex (AWD)",
                 "desc": "A heavy luxury cruise liner designed to crush speed records. A quad-turbocharged layout delivering unmatched straight-line dominance."
@@ -108,7 +106,7 @@ const carDatabaseModern = {
         },
         "South Korea": {
             "Hyundai": {
-                "name": "2018 HYUNDAI i30 N PERFORMANCE", "image": "2018 Hyundai i30 N Performance.jpeg",
+                "name": "2018 HYUNDAI i30 N PERFORMANCE", "image": "2018 Hyundai i30 N.jpeg",
                 "speed": "70%", "accel": "72%", "handling": "80%",
                 "engine": "2.0L Turbocharged I4", "power": "271 HP", "drivetrain": "Front-Wheel Drive (FWD)",
                 "desc": "The definitive launchpad for South Korea's high-performance 'N' division. Tuned heavily at the Nurburgring to battle performance track hatchbacks."
@@ -124,7 +122,7 @@ const carDatabaseModern = {
         },
         "Sweden": {
             "Koenigsegg": {
-                "name": "2014 KOENIGSEGG ONE:1", "image": "2014 Koenigsegg One1.jpeg",
+                "name": "2014 KOENIGSEGG ONE:1", "image": "2014 Koenigsegg One 1.jpeg",
                 "speed": "100%", "accel": "98%", "handling": "95%",
                 "engine": "5.0L Twin-Turbo V8", "power": "1360 HP", "drivetrain": "Rear Mid-Engine (RWD)",
                 "desc": "The world's first true 'Megacar.' It achieved a perfect 1:1 power-to-weight ratio, producing 1,360 horsepower matching its 1,360 kilogram chassis."
@@ -134,7 +132,7 @@ const carDatabaseModern = {
     "2020s": {
         "Croatia": {
             "Rimac": {
-                "name": "2026 RIMAC NEVERA R EV", "image": "2026 Rimac Nevera R EV.jpeg",
+                "name": "2026 RIMAC NEVERA R EV", "image": "2026 Rimac Nevera R.jpeg",
                 "speed": "100%", "accel": "100%", "handling": "96%",
                 "engine": "Quad Electric Motors", "power": "2107 HP", "drivetrain": "Torque Vectoring (AWD)",
                 "desc": "The peak of modern electric hypercar tech. Unleashing an insane horsepower output, this machine shatters production vehicle launch records."
@@ -142,7 +140,7 @@ const carDatabaseModern = {
         },
         "Italy": {
             "Maserati": {
-                "name": "2022 MASERATI MC20 SUPERCAR", "image": "2022 Maserati MC20 Supercar.jpeg",
+                "name": "2022 MASERATI MC20 SUPERCAR", "image": "2022 Maserati MC20.jpeg",
                 "speed": "94%", "accel": "92%", "handling": "90%",
                 "engine": "3.0L Twin-Turbo V6 Nettuno", "power": "621 HP", "drivetrain": "MR Layout (RWD)",
                 "desc": "Maserati's return to the mid-engine supercar arena. Powered by an F1-derived pre-chamber combustion engine nested in an ultra-rigid carbon monocoque."
@@ -153,9 +151,3 @@ const carDatabaseModern = {
                 "name": "2025 KOENIGSEGG JESKO ABSOLUT", "image": "2025 Koenigsegg Jesko Absolut.jpeg",
                 "speed": "100%", "accel": "96%", "handling": "94%",
                 "engine": "5.0L Twin-Turbo V8 (E85)", "power": "1600 HP", "drivetrain": "9-Speed Light Speed (RWD)",
-                "desc": "Engineered with absolute extreme aerodynamics to shatter the 300+ mph barrier. The absolute pinnacle of combustion engine hypercar top-speed metrics."
-            }
-        }
-    }
-};
-
