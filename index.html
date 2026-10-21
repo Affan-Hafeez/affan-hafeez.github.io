@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Garage Master Showroom</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Link your three modular data sheets -->
+    <!-- These tags load your data sheets -->
     <script src="cars_early.js"></script>
     <script src="cars_middle.js"></script>
     <script src="cars_modern.js"></script>
@@ -42,7 +42,8 @@
         <section class="car-display">
             <h1 id="car-title">SELECT VEHICLE</h1>
             <div class="turntable">
-                <img id="car-image" src="mustang.jpg" alt="Showroom Grid">
+                <!-- This image tag starts with your custom default Mustang picture -->
+                <img id="car-image" src="1969 Ford Mustang Boss 429.jpeg" alt="Showroom Grid">
             </div>
             <div class="blog-review-box">
                 <p id="car-description">Please choose an era, country, and car manufacturer from the top navigation dashboard matrix to begin loading the profile data.</p>
@@ -75,9 +76,9 @@
         </section>
     </main>
 
-    <!-- MASTER ASSEMBLY SCRIPT -->
+    <!-- 💡 HERE IS WHERE THE JAVASCRIPT LIVES INSIDE THE HTML FILE 💡 -->
     <script>
-        // Combine our three separate database blocks into one master matrix array
+        // Combine our three separate database blocks into one master array matrix
         const carDatabase = {
             ...carDatabaseEarly,
             ...carDatabaseMiddle,
@@ -131,7 +132,6 @@
 
             // Render details text
             document.getElementById('car-title').innerText = car.name;
-            document.getElementById('car-image').src = car.image;
             document.getElementById('car-description').innerText = car.desc;
             
             // Render specifications panel
@@ -143,7 +143,96 @@
             document.getElementById('stat-speed').style.width = car.speed;
             document.getElementById('stat-accel').style.width = car.accel;
             document.getElementById('stat-handling').style.width = car.handling;
-        }
-    </script>
-</body>
-</html>
+
+            // 🌟 SMART FILENAME MATCHER 🌟
+            // This takes the clean name from your database and converts it to match your exact file names with spaces and .jpeg
+            let formattedTitle = car.name;
+            
+            if (formattedTitle.includes("SUBARU IMPREZA 22B STi")) {
+                formattedTitle = "1998 Subaru Impreza 22B STi";
+            } else if (formattedTitle.includes("FERRARI F40 COUPE")) {
+                formattedTitle = "1987 Ferrari F40 Coupe";
+            } else if (formattedTitle.includes("FORD MUSTANG BOSS 429")) {
+                formattedTitle = "1969 Ford Mustang Boss 429";
+            } else if (formattedTitle.includes("MITSUBISHI LANCER EVO VII")) {
+                formattedTitle = "2001 Mitsubishi Lancer Evo VII";
+            } else if (formattedTitle.includes("NISSAN SKYLINE GT-R (R32)")) {
+                formattedTitle = "1994 Nissan Skyline GT-R (R32)";
+            } else if (formattedTitle.includes("RIMAC NEVERA R EV")) {
+                formattedTitle = "2026 Rimac Nevera R EV";
+            } else if (formattedTitle.includes("CHEVROLET CORVETTE C1")) {
+                formattedTitle = "1953 Chevrolet Corvette C1";
+            } else if (formattedTitle.includes("MERCEDES-BENZ 300 SL GULLWING")) {
+                formattedTitle = "1954 Mercedes-Benz 300 SL";
+            } else if (formattedTitle.includes("PORSCHE 356 SPEEDSTER")) {
+                formattedTitle = "1955 Porsche 356 Speedster";
+            } else if (formattedTitle.includes("FERRARI 250 TESTA ROSSA")) {
+                formattedTitle = "1957 Ferrari 250 Testa Rossa";
+            } else if (formattedTitle.includes("ASTON MARTIN DBR1")) {
+                formattedTitle = "1959 Aston Martin DBR1";
+            } else if (formattedTitle.includes("FORD GT40 MK II")) {
+                formattedTitle = "1966 Ford GT40 Mk II";
+            } else if (formattedTitle.includes("SHELBY COBRA 427 S/C")) {
+                formattedTitle = "1965 Shelby Cobra 427 S/C";
+            } else if (formattedTitle.includes("PORSCHE 911 COUPE")) {
+                formattedTitle = "1964 Porsche 911 Coupe";
+            } else if (formattedTitle.includes("LAMBORGHINI MIURA P400")) {
+                formattedTitle = "1966 Lamborghini Miura P400";
+            } else if (formattedTitle.includes("TOYOTA 2000GT")) {
+                formattedTitle = "1967 Toyota 2000GT";
+            } else if (formattedTitle.includes("PORSCHE 911 TURBO (930)")) {
+                formattedTitle = "1975 Porsche 911 Turbo (930)";
+            } else if (formattedTitle.includes("LAMBORGHINI COUNTACH LP400")) {
+                formattedTitle = "1974 Lamborghini Countach LP400";
+            } else if (formattedTitle.includes("LANCIA STRATOS HF")) {
+                formattedTitle = "1974 Lancia Stratos HF";
+            } else if (formattedTitle.includes("NISSAN SKYLINE 2000GT-R")) {
+                formattedTitle = "1971 Nissan Skyline 2000GT-R";
+            } else if (formattedTitle.includes("ALPINE A110 1600S")) {
+                formattedTitle = "1973 Alpine A110 1600S";
+            } else if (formattedTitle.includes("AUDI SPORT QUATTRO")) {
+                formattedTitle = "1984 Audi Sport Quattro";
+            } else if (formattedTitle.includes("BMW M3 COUPE (E30)")) {
+                formattedTitle = "1986 BMW M3 Coupe (E30)";
+            } else if (formattedTitle.includes("LANCIA 037 RALLY")) {
+                formattedTitle = "1982 Lancia 037 Rally";
+            } else if (formattedTitle.includes("TOYOTA COROLLA AE86 TRUENO")) {
+            } else if (formattedTitle.includes("MAZDA RX-7 (FC3S)")) {
+formattedTitle = "1985 Mazda RX-7 (FC3S)";
+} else if (formattedTitle.includes("PEUGEOT 205 TURBO 16")) {
+formattedTitle = "1984 Peugeot 205 Turbo 16";
+} else if (formattedTitle.includes("RENAULT 5 TURBO 1")) {
+formattedTitle = "1980 Renault 5 Turbo 1";
+} else if (formattedTitle.includes("DODGE VIPER GTS")) {
+formattedTitle = "1996 Dodge Viper GTS";
+} else if (formattedTitle.includes("MAZDA RX-7 (FD3S)")) {
+formattedTitle = "1992 Mazda RX-7 (FD3S)";
+} else if (formattedTitle.includes("LOTUS ELISE SERIES 1")) {
+formattedTitle = "1996 Lotus Elise Series 1";
+} else if (formattedTitle.includes("VENTURI ATLANTIQUE 300")) {
+formattedTitle = "1995 Venturi Atlantique 300";
+} else if (formattedTitle.includes("LEXUS LFA SUPERCAR")) {
+formattedTitle = "2009 Lexus LFA Supercar";
+} else if (formattedTitle.includes("RENAULT CLIO V6 RS")) {
+formattedTitle = "2001 Renault Clio V6 RS";
+} else if (formattedTitle.includes("PAGANI ZONDA C12-S")) {
+formattedTitle = "2002 Pagani Zonda C12-S";
+} else if (formattedTitle.includes("BUGATTI CHIRON HYPERCAR")) {
+formattedTitle = "2016 Bugatti Chiron Hypercar";
+} else if (formattedTitle.includes("ALPINE A110 R")) {
+formattedTitle = "2017 Alpine A110 R";
+} else if (formattedTitle.includes("HYUNDAI i30 N PERFORMANCE")) {
+formattedTitle = "2018 Hyundai i30 N Performance";
+} else if (formattedTitle.includes("MERCEDES-AMG GT S")) {
+formattedTitle = "2015 Mercedes-AMG GT S";
+} else if (formattedTitle.includes("KOENIGSEGG ONE:1")) {
+formattedTitle = "2014 Koenigsegg One1";
+} else if (formattedTitle.includes("MASERATI MC20 SUPERCAR")) {
+formattedTitle = "2022 Maserati MC20 Supercar";
+} else if (formattedTitle.includes("KOENIGSEGG JESKO ABSOLUT")) {
+formattedTitle = "2025 Koenigsegg Jesko Absolut";
+}
+// Sets the image source directly to match your exact spelling and .jpeg layout
+document.getElementById('car-image').src = formattedTitle + ".jpeg";
+}
+                formattedTitle = "1986 Toyota Corolla AE86 Trueno";
