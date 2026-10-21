@@ -42,6 +42,12 @@ const carDatabaseEarly = {
     "1960s": {
         "USA": {
             "Ford": {
+                "name": "1969 FORD MUSTANG BOSS 429", "image": "1969 Ford Mustang Boss 429.jpeg",
+                "speed": "78%", "accel": "65%", "handling": "45%",
+                "engine": "7.0L Boss 429 Semi-Hemi V8", "power": "375 HP", "drivetrain": "FR Layout (RWD)",
+                "desc": "A legendary muscle car built to satisfy NASCAR rules. Featuring a massive high-torque V8 engine and aggressive fastback styling lines."
+            },
+            "Ford GT40": {
                 "name": "1966 FORD GT40 MK II", "image": "1966 Ford GT40 Mk II.jpeg",
                 "speed": "92%", "accel": "88%", "handling": "80%",
                 "engine": "7.0L Carroll Shelby V8", "power": "485 HP", "drivetrain": "MR Layout (RWD)",
