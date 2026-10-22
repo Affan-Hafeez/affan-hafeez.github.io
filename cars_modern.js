@@ -74,7 +74,7 @@ const carDatabaseModern = {
         },
         "France": {
             "Renault": {
-                "name": "2001 RENAULT CLIO V6 RS", "image": "2001 Renault Clio V6 RS.jpeg",
+                "name": "2001 RENAULT CLIO V6 RS", "image": "2001 Renault Clio V6 RS.jpg",
                 "speed": "82%", "accel": "84%", "handling": "80%",
                 "engine": "3.0L naturally-aspirated V6", "power": "227 HP", "drivetrain": "MR Layout (RWD)",
                 "desc": "Wide-body hatchback madness. Placed a heavy naturally aspirated V6 into a tiny rear-wheel drive chassis."
